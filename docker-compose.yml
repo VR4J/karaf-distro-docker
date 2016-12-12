@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  karaf:
+      image: karaf-distro-docker
+      container_name: karaf
+      ports:
+        - "1099:1099"
+        - "44444:44444"
+        - "8101:8101"
+      volumes:
+        - /tmp/deploy/:/opt/karaf/deploy/
+      restart: always
